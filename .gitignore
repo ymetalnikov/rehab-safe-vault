@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Obsidian — local workspace state, not for git
+.obsidian/
+.trash/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Session videos — never committed, kept only locally
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.m4v
+*.M4V
+
+# Personal data and progress (not pushed to GitHub)
+00_Home.md
+00_Profile.md
+05_Rehab_Protocols/Current_2-Week_Cycle.md
+07_Session_Log/**/*
+!07_Session_Log/**/.gitkeep
+08_Summaries/cycles/*.md
+08_Summaries/weekly/*.md
+!08_Summaries/cycles/.gitkeep
+!08_Summaries/weekly/.gitkeep
