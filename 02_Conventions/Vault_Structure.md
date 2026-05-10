@@ -16,7 +16,7 @@ All working notes, templates, protocols, journals, and summaries are stored rela
 - `05_Rehab_Protocols/` — exercises, protocols, current cycles.
 - `06_Metrics_and_Monitoring/` — metrics, data quality, summary format.
 - `07_Session_Log/` — actual session entries.
-- `08_Summaries/` — weekly, 14-day, and monthly reviews.
+- `08_Summaries/` — weekly, 10-day, and monthly reviews.
 - `09_Templates/` — templates for new entries.
 - `99_Archive/` — outdated or irrelevant materials.
 
@@ -42,7 +42,7 @@ Example:
 
 `2026-W18 Weekly Summary.md`
 
-### 2-week cycle
+### Cycle
 
 Format:
 
@@ -50,7 +50,7 @@ Format:
 
 Example:
 
-`2026-04-30 — 2026-05-14 Cycle.md`
+`2026-04-30 — 2026-05-10 Cycle.md`
 
 ## Source-of-truth rule
 

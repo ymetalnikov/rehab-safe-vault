@@ -6,13 +6,13 @@
 - [x] Session template.
 - [x] Weekly summary template.
 - [x] Protocol template.
-- [x] 2-week cycle template.
+- [x] cycle template.
 - [x] Glossary and scales.
 - [x] Video quality checklist.
 - [x] AI session summary format.
 - First-run bootstrap.
-- Choosing a 2-week goal.
-- Choosing exercises for the 2-week cycle.
+- Choosing a goal for the cycle.
+- Choosing exercises for the cycle.
 - Post-session feedback for each exercise.
 - Ability to fill in feedback later.
 - Field for exercise weight/importance.
@@ -26,7 +26,7 @@
 - Approximate range-of-motion chart.
 - Comparison of the last 3 sessions.
 - Week-over-week comparison.
-- Automatic 14-day report.
+- Automatic 10-day report.
 - Optional local video storage.
 - Summary export to PDF/Markdown.
 

@@ -20,7 +20,7 @@ A personal recovery tracker: you define the exercise protocol and the reference 
 
 ## Active Protocol
 
-- **Current Cycle:** [[05_Rehab_Protocols/Current_2-Week_Cycle]] <!-- agent will fill end date here -->
+- **Current Cycle:** [[05_Rehab_Protocols/Current_Cycle]] <!-- agent will fill end date here -->
 - **Profile:** [[00_Profile]] <!-- agent will fill status here -->
 
 ## Exercise Database
@@ -33,7 +33,7 @@ A personal recovery tracker: you define the exercise protocol and the reference 
 - [[09_Templates/Session_Entry_Template]]
 - [[09_Templates/Video_Meta_Template]]
 - [[09_Templates/Weekly_Summary_Template]]
-- [[09_Templates/2-Week_Cycle_Template]]
+- [[09_Templates/Cycle_Template]]
 
 ## Reference
 

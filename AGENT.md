@@ -39,13 +39,13 @@ Triggered on first run, when `00_Profile.md` is missing or has `status: draft` o
 
 If `00_Profile.md` does not exist in the vault root, create it by copying `09_Templates/Profile_Template.md`. Same applies to `00_Home.md` — if missing, create it from `09_Templates/Home_Template.md`. Both files are gitignored; only the templates are tracked.
 
-**Already-onboarded check (run before anything else).** If `00_Profile.md` exists with `status: active`, **or** `05_Rehab_Protocols/Current_2-Week_Cycle.md` exists with content beyond the placeholder, **or** `07_Session_Log/` contains any session folders — the user has prior state. Do not overwrite it. Instead:
+**Already-onboarded check (run before anything else).** If `00_Profile.md` exists with `status: active`, **or** `05_Rehab_Protocols/Current_Cycle.md` exists with content beyond the placeholder, **or** `07_Session_Log/` contains any session folders — the user has prior state. Do not overwrite it. Instead:
 
 1. Tell the user plainly what already exists ("you have an active profile filled on `<filled_at>`, an active cycle ending `<end>`, and N past sessions in `07_Session_Log/`").
 2. Ask which they want:
    - **Update profile** — keep the cycle and history, only adjust profile fields the user wants to change. Run a short interview only on those fields. Update `last_reviewed`.
    - **Start a fresh cycle but keep history** — leave `00_Profile.md` and `07_Session_Log/` alone, archive the current cycle to `08_Summaries/cycles/` (set `status: closed`), and run only steps 3–5 below to build a new cycle.
-   - **Full reset** — only after the user explicitly confirms: archive `00_Profile.md` to `99_Archive/profiles/<filled_at>.md`, archive `Current_2-Week_Cycle.md` to `08_Summaries/cycles/`, and **leave `07_Session_Log/` untouched** (the user can delete it manually if they really want to). Then proceed with full onboarding.
+   - **Full reset** — only after the user explicitly confirms: archive `00_Profile.md` to `99_Archive/profiles/<filled_at>.md`, archive `Current_Cycle.md` to `08_Summaries/cycles/`, and **leave `07_Session_Log/` untouched** (the user can delete it manually if they really want to). Then proceed with full onboarding.
 3. The agent never silently overwrites a profile, cycle, or session log. If unsure, ask.
 
 1. **Interview** — ask one question at a time, conversationally. Do not dump a form. Cover, in this order:
@@ -59,7 +59,7 @@ If `00_Profile.md` does not exist in the vault root, create it by copying `09_Te
 
 2. **Fill `00_Profile.md`** from the interview (creating it from `09_Templates/Profile_Template.md` if missing). Set `status: active`, `filled_at` to today.
 
-3. **Pick exercises for the first 2-week cycle** from `05_Rehab_Protocols/Exercise_Database/`. **Always 3 exercises**, fixed for the cycle.
+3. **Pick exercises for the first 10-day cycle** from `05_Rehab_Protocols/Exercise_Database/`. **Always 3–5 exercises**, fixed for the cycle.
 
    Filters:
    - exercise's `phase_min` ≤ user's current phase
@@ -76,8 +76,8 @@ If `00_Profile.md` does not exist in the vault root, create it by copying `09_Te
 4. **Propose** the cycle as a draft table (exercise, frequency, sets/reps/time, weight 1–5, what to track). Ask: "ok or adjust?"
 
 5. **Integrate** (after approval):
-   - Create the cycle file from `09_Templates/2-Week_Cycle_Template.md` at `05_Rehab_Protocols/Current_2-Week_Cycle.md` (overwrite the placeholder).
-   - Fill frontmatter: `start` = today, `end` = today + 14 days, `status: active`, `phase`, `cycle_number: 1`.
+   - Create the cycle file from `09_Templates/Cycle_Template.md` at `05_Rehab_Protocols/Current_Cycle.md` (overwrite the placeholder).
+   - Fill frontmatter: `start` = today, `end` = today + 10 days, `status: active`, `phase`, `cycle_number: 1`.
    - Update `00_Home.md` if links changed.
 
 ### Live Session
@@ -89,7 +89,7 @@ The agent acts as a trainer: walks through the day's exercises one at a time, ac
 1. **Prepare folder for today**
    - Create `07_Session_Log/<YYYY-MM-DD>/` if it does not exist.
    - Create `session.md` from `09_Templates/Session_Entry_Template.md`. Fill frontmatter: `date`, `cycle_number`, `agent` (which agent is leading), `red_flags: []`.
-   - Load the 3 exercises from the active cycle. Pre-fill the **Plan & checklist** and **Per exercise** sections with names + wikilinks.
+   - Load the 3–5 exercises from the active cycle. Pre-fill the **Plan & checklist** and **Per exercise** sections with names + wikilinks.
 
 2. **Capability disclosure**
    - State: "I'm `<agent>`. I can run the session and log subjective data. I do not analyze video — only Gemini does. Drop videos anyway, I'll queue them."
@@ -101,8 +101,8 @@ The agent acts as a trainer: walks through the day's exercises one at a time, ac
    - The agent does not block or skip an exercise on its own. The user decides; the agent records.
 
 4. **Per exercise (loop, in order)**
-   For each of the 3 exercises:
-   - Show: `(N/3) <name>`. Read its `reference_url` and `cues` from the exercise file. Show target sets/reps/time.
+   For each of the 3–5 exercises:
+   - Show: `(N/M) <name>`. Read its `reference_url` and `cues` from the exercise file. Show target sets/reps/time.
    - Wait for user. Accept either:
      - a path to a video file (drag-and-drop into terminal),
      - the word `skip` (or anything not a path) to mark "without video".
@@ -181,8 +181,8 @@ Triggered when the user returns and the active cycle's `end` date is reached or 
 5. **User finalizes.** Agent proposes, user approves or edits each decision.
 
 6. **Close and open cycles:**
-   - Move the closed `Current_2-Week_Cycle.md` to `08_Summaries/cycles/<start>_to_<end>.md`. Set its frontmatter `status: closed`. Append the summary and the user's reflections to it.
-   - Create a new `Current_2-Week_Cycle.md` from the template. Increment `cycle_number`. Carry over kept exercises, apply changes, add new ones, drop removed ones. Still 3 exercises.
+   - Move the closed `Current_Cycle.md` to `08_Summaries/cycles/<start>_to_<end>.md`. Set its frontmatter `status: closed`. Append the summary and the user's reflections to it.
+   - Create a new `Current_Cycle.md` from the template. Increment `cycle_number`. Carry over kept exercises, apply changes, add new ones, drop removed ones. Still 3–5 exercises.
    - Update `00_Home.md` if needed.
 
 ### Exercise Adder
@@ -202,3 +202,4 @@ When the user provides a link or description for a new exercise:
    - Fill frontmatter completely — `reference_url` is required and must be a direct URL Gemini can fetch.
    - Place it in `05_Rehab_Protocols/Exercise_Database/`.
    - Add a wikilink to it in `00_Home.md`.
+e.md`.

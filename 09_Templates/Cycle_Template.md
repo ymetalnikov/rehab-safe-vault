@@ -10,17 +10,21 @@ cycle_number:
 
 ## Context
 
-- Period:
+- Period: 10 days
 - Recovery stage:
-- Main 2-week goal:
+- Main goal:
 - Current restrictions:
 - What's bothering you now:
 
 ## Cycle exercises
 
-| Exercise | Frequency | Sets / reps / time | Weight `1–5` | What to track | Restrictions |
-|---|---|---|---:|---|---|
-| [[]] | | | | | |
+| Exercise | Priority | Frequency | Sets / reps / time | Weight `1–5` | What to track | Restrictions |
+|---|---|---|---|---:|---|---|
+| [[]] | Primary | | | | | |
+| [[]] | Primary | | | | | |
+| [[]] | Secondary | | | | | |
+
+> **Note:** Focus on Primary exercises if time or energy is limited.
 
 ## Performance rules
 
@@ -32,8 +36,8 @@ cycle_number:
 ## Planned check-points
 
 - [ ] Day 1: starting entry.
-- [ ] Day 7: weekly summary.
-- [ ] Day 14: cycle wrap-up.
+- [ ] Day 5: mid-cycle summary / mini-review.
+- [ ] Day 10: cycle wrap-up & AI Review.
 
 ## Cycle wrap-up
 
@@ -71,4 +75,4 @@ cycle_number:
 
 ## Tags
 
-#cycle #2-weeks #rehab
+#cycle #10-days #rehab

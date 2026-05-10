@@ -37,7 +37,7 @@ A single measurement isn't important on its own. Look at series:
 
 - last 3 sessions;
 - 7 days;
-- 14 days;
+- 10 days;
 - 30 days.
 
 ## Possible positive trend

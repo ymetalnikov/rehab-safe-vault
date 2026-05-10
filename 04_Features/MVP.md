@@ -8,14 +8,14 @@ Test a simple scenario:
 
 ## Included in the MVP
 
-### 0. First run and 2-week cycle
+### 0. First run and 10-day cycle
 
 - fill in info about myself;
-- set a 2-week goal;
-- pick exercises for the cycle;
-- after 2 weeks, review the trend and update the plan.
+- set a cycle goal;
+- pick 3–5 exercises for the cycle (assign Primary/Secondary);
+- after 10 days, review the trend and update the plan.
 
-Details: [[Bootstrap_and_2-Week_Cycle]]
+Details: [[Bootstrap_and_Cycle]]
 
 ### 1. Exercise database
 
