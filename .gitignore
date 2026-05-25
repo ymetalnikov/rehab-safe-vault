@@ -20,6 +20,9 @@
 00_Home.md
 00_Profile.md
 05_Rehab_Protocols/Current_Cycle.md
+07_Session_Log/00_Home.md
+07_Session_Log/00_Profile.md
+07_Session_Log/Current_Cycle.md
 07_Session_Log/**/*
 !07_Session_Log/**/.gitkeep
 08_Summaries/cycles/*.md

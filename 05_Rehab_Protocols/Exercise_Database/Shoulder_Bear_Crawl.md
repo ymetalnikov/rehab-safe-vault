@@ -4,7 +4,7 @@ category: stability-strength
 difficulty: 4
 weight: 5
 phase_min: late
-reference_url: https://www.youtube.com/watch?v=S0uXp79O94o
+reference_url: https://www.youtube.com/watch?v=O3EaGnb4raY
 equipment: ["Floor"]
 ---
 
